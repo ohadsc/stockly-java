@@ -1,0 +1,23 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "userSprint",
+            "otherEntityName": "userSprint",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "sprint"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        }
+    ],
+    "changelogDate": "20160113100113",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

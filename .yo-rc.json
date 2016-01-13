@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "stockly",
+    "packageName": "com.osc.stockly",
+    "packageFolder": "com/osc/stockly",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "no",
+    "useSass": true,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": false,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "e75ab1021aa2b6dfd2a7714a406dd1cd11f56bc1",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}
