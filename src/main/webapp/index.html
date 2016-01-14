@@ -15,6 +15,8 @@
         <!-- build:css assets/styles/main.css -->
         <link rel="stylesheet" href="assets/styles/main.css">
         <!-- endbuild -->
+        <!-- placeholder link to load bootswatch themes, title holds the current applied theme name-->
+        <link rel="stylesheet" href="" id="bootswatch-css" title="Default">
     </head>
     <body ng-app="stocklyApp">
         <!--[if lt IE 9]>
@@ -26,7 +28,20 @@
             <div class="well" ui-view="content"></div>
 
             <div class="footer">
-                <p translate="footer">This is your footer</p>
+                <p translate="footer" class="pull-left">This is your footer</p>
+                <div ng-controller="BootswatchController" class="dropup pull-right">
+                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-adjust"></span>
+                        <span class="hidden-tablet" translate="global.menu.theme">Theme</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="theme-link" ng-repeat="theme in themes">
+                            <a href="" jh-switch-theme="theme">{{theme.name}}</a>
+                            
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -179,6 +194,9 @@
     <script src="scripts/app/entities/company/company-delete-dialog.controller.js"></script>
     <script src="scripts/app/entities/company/company-detail.controller.js"></script>
     <script src="scripts/components/entities/company/company.service.js"></script>
+    <script src="scripts/components/util/bootswatch.controller.js"></script>
+    <script src="scripts/components/util/bootswatch.directive.js"></script>
+    <script src="scripts/components/util/bootswatch.service.js"></script>
     <!-- endbuild -->
 </body>
 </html>
