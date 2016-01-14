@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span>UserStock</span> {{userStock.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>Amount</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{userStock.amount}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>BuyPrice</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{userStock.buyPrice}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>sprint</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="sprint.detail({id:userStock.sprint.id})">{{userStock.sprint.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>user</span>
+                </td>
+                <td>
+                    {{userStock.user.id}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>stock</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="stock.detail({id:userStock.stock.id})">{{userStock.stock.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

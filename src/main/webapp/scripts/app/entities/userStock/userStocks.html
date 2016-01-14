@@ -1,0 +1,62 @@
+<div>
+    <h2>UserStocks</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="userStock.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span>Create a new UserStock</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Amount</span></th>
+                    <th><span>BuyPrice</span></th>
+                    <th><span>sprint</span></th>
+                    <th><span>user</span></th>
+                    <th><span>stock</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="userStock in userStocks track by userStock.id">
+                    <td><a ui-sref="userStock.detail({id:userStock.id})">{{userStock.id}}</a></td>
+                    <td>{{userStock.amount}}</td>
+                    <td>{{userStock.buyPrice}}</td>
+                    <td>
+                        <a ui-sref="sprint.detail({id:userStock.sprint.id})">{{userStock.sprint.id}}</a>
+                    </td>
+                    <td>
+                        {{userStock.user.id}}
+                    </td>
+                    <td>
+                        <a ui-sref="stock.detail({id:userStock.stock.id})">{{userStock.stock.id}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="userStock.detail({id:userStock.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="userStock.edit({id:userStock.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="userStock.delete({id:userStock.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

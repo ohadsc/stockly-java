@@ -1,0 +1,47 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "stock",
+            "otherEntityName": "stock",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "sprint",
+            "otherEntityName": "sprint",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "type",
+            "fieldType": "TransactionType",
+            "fieldValues": "BUY,SELL"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "price",
+            "fieldType": "Float"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "date",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20160114123015",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

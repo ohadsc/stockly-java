@@ -1,0 +1,64 @@
+<div>
+    <h2>Transactions</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="transaction.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span>Create a new Transaction</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Type</span></th>
+                    <th><span>Price</span></th>
+                    <th><span>Date</span></th>
+                    <th><span>user</span></th>
+                    <th><span>stock</span></th>
+                    <th><span>sprint</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="transaction in transactions track by transaction.id">
+                    <td><a ui-sref="transaction.detail({id:transaction.id})">{{transaction.id}}</a></td>
+                    <td translate="{{'stocklyApp.TransactionType.' + transaction.type}}">{{transaction.type}}</td>
+                    <td>{{transaction.price}}</td>
+                        <td>{{transaction.date | date:'mediumDate'}}</td>
+                    <td>
+                        {{transaction.user.id}}
+                    </td>
+                    <td>
+                        <a ui-sref="stock.detail({id:transaction.stock.id})">{{transaction.stock.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="sprint.detail({id:transaction.sprint.id})">{{transaction.sprint.id}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="transaction.detail({id:transaction.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="transaction.edit({id:transaction.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="transaction.delete({id:transaction.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

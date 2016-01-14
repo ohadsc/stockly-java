@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span>Transaction</span> {{transaction.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>Type</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'stocklyApp.TransactionType.' + transaction.type}}">{{transaction.type}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Price</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{transaction.price}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Date</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{transaction.date | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>user</span>
+                </td>
+                <td>
+                    {{transaction.user.id}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>stock</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="stock.detail({id:transaction.stock.id})">{{transaction.stock.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>sprint</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="sprint.detail({id:transaction.sprint.id})">{{transaction.sprint.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

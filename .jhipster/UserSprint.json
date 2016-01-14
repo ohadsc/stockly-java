@@ -1,0 +1,29 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "sprint",
+            "otherEntityName": "sprint",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "cash",
+            "fieldType": "Float"
+        }
+    ],
+    "changelogDate": "20160113133934",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

@@ -1,0 +1,35 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "symbol",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "value",
+            "fieldType": "Float"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "change",
+            "fieldType": "Float"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "url",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160114120331",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}
