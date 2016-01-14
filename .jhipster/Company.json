@@ -1,0 +1,29 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "symbol",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "industry",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "sector",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160114123530",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

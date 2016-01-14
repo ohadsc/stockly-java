@@ -1,0 +1,50 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myCompanyLabel">Create or edit a Company</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="company.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="company.name"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_symbol">Symbol</label>
+            <input type="text" class="form-control" name="symbol" id="field_symbol"
+                    ng-model="company.symbol"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_industry">Industry</label>
+            <input type="text" class="form-control" name="industry" id="field_industry"
+                    ng-model="company.industry"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_sector">Sector</label>
+            <input type="text" class="form-control" name="sector" id="field_sector"
+                    ng-model="company.sector"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>
