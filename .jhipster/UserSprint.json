@@ -5,14 +5,14 @@
             "relationshipName": "user",
             "otherEntityName": "user",
             "relationshipType": "many-to-one",
-            "otherEntityField": "name"
+            "otherEntityField": "login"
         },
         {
             "relationshipId": 2,
             "relationshipName": "sprint",
             "otherEntityName": "sprint",
             "relationshipType": "many-to-one",
-            "otherEntityField": "id"
+            "otherEntityField": "name"
         }
     ],
     "fields": [

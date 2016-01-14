@@ -27,10 +27,10 @@
                     <td><a ui-sref="userSprint.detail({id:userSprint.id})">{{userSprint.id}}</a></td>
                     <td>{{userSprint.cash}}</td>
                     <td>
-                        {{userSprint.user.name}}
+                        {{userSprint.user.login}}
                     </td>
                     <td>
-                        <a ui-sref="sprint.detail({id:userSprint.sprint.id})">{{userSprint.sprint.id}}</a>
+                        <a ui-sref="sprint.detail({id:userSprint.sprint.id})">{{userSprint.sprint.name}}</a>
                     </td>
                     <td>
                         <button type="submit"

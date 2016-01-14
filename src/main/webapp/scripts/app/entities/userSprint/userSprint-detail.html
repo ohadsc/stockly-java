@@ -23,7 +23,7 @@
                     <span>user</span>
                 </td>
                 <td>
-                    {{userSprint.user.name}}
+                    {{userSprint.user.login}}
                 </td>
             </tr>
             <tr>
@@ -31,7 +31,7 @@
                     <span>sprint</span>
                 </td>
                 <td>
-                    <a class="form-control-static" ui-sref="sprint.detail({id:userSprint.sprint.id})">{{userSprint.sprint.id}}</a>
+                    <a class="form-control-static" ui-sref="sprint.detail({id:userSprint.sprint.id})">{{userSprint.sprint.name}}</a>
                 </td>
             </tr>
             </tbody>

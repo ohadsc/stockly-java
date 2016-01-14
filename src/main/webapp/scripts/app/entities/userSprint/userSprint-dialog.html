@@ -22,13 +22,13 @@
 
         <div class="form-group">
             <label for="field_user">user</label>
-            <select class="form-control" id="field_user" name="user" ng-model="userSprint.user" ng-options="user as user.name for user in users track by user.id">
+            <select class="form-control" id="field_user" name="user" ng-model="userSprint.user" ng-options="user as user.login for user in users track by user.id">
                 <option value=""></option>
             </select>
         </div>
         <div class="form-group">
             <label for="field_sprint">sprint</label>
-            <select class="form-control" id="field_sprint" name="sprint" ng-model="userSprint.sprint" ng-options="sprint as sprint.id for sprint in sprints track by sprint.id">
+            <select class="form-control" id="field_sprint" name="sprint" ng-model="userSprint.sprint" ng-options="sprint as sprint.name for sprint in sprints track by sprint.id">
                 <option value=""></option>
             </select>
         </div>
